@@ -6,7 +6,7 @@ import '../model/articles_list_model.dart';
 
 class NewsApi extends ClassRepository {
   // put the API key here
-  var keyApi = "c99b357c606344898ff99276845018d8.rtfd";
+  var keyApi = "c99b357c606344898ff99276845018d8";
 
   @override
   Future<List<ArticleModel>> getAllNews() async {

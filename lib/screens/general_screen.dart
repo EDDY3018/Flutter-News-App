@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 import '../repository/news_api.dart';
+import '../specs/colors.dart';
 import '../view_model/article_view_model.dart';
 import '../view_model/articles_view_model.dart';
 import 'article_details_screen.dart';
@@ -22,7 +23,9 @@ class _GeneralScreenState extends State<GeneralScreen> {
       future: articlesListViewModel.fetchNewsGeneral(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
+          return const CircularProgressIndicator(
+            color: WHITE,
+          );
         } else {
           var news = snapshot.data;
           return Scaffold(

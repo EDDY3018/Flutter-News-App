@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mvvm_news_app/screens/general_screen.dart';
 import 'package:mvvm_news_app/screens/health_screen.dart';
 import 'package:mvvm_news_app/screens/science_screen.dart';
+import 'package:mvvm_news_app/screens/sports.dart';
 import 'package:mvvm_news_app/screens/technology_screen.dart';
 import 'package:mvvm_news_app/screens/top_headlines_screen.dart';
-import 'package:mvvm_news_app/specs/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
               Tab(text: "Technology"),
               Tab(text: "Science"),
               Tab(text: "Top headlines"),
+              Tab(text: "Sports"),
             ],
           ),
         ),
@@ -44,6 +45,7 @@ class HomeScreen extends StatelessWidget {
             TechnologyScreen(),
             ScienceScreen(),
             TopHeadlinesScreen(),
+            SportsScreen(),
           ],
         ),
       ),

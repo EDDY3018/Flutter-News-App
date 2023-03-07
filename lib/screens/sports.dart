@@ -7,20 +7,20 @@ import '../view_model/article_view_model.dart';
 import '../view_model/articles_view_model.dart';
 import 'article_details_screen.dart';
 
-class TechnologyScreen extends StatefulWidget {
-  const TechnologyScreen({super.key});
+class SportsScreen extends StatefulWidget {
+  const SportsScreen({super.key});
 
   @override
-  State<TechnologyScreen> createState() => _TechnologyScreenState();
+  State<SportsScreen> createState() => _SportsScreenState();
 }
 
-class _TechnologyScreenState extends State<TechnologyScreen> {
+class _SportsScreenState extends State<SportsScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleViewModel>>(
-      future: articlesListViewModel.fetchNewsTechnology(),
+      future: articlesListViewModel.fetchNewsScience(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(

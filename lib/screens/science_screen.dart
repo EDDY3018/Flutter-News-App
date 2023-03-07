@@ -1,5 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:mvvm_news_app/specs/colors.dart';
 
 import '../repository/news_api.dart';
 import '../view_model/article_view_model.dart';
@@ -22,7 +23,9 @@ class _ScienceScreenState extends State<ScienceScreen> {
       future: articlesListViewModel.fetchNewsScience(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
+          return const CircularProgressIndicator(
+            color: WHITE,
+          );
         } else {
           var news = snapshot.data;
           return Scaffold(
