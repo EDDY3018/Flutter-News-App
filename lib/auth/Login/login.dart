@@ -21,23 +21,14 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // logo
-              Image.asset(
-                'asset/images/logo.png',
-                width: 168,
-                height: 42,
-              ),
-              const SizedBox(height: 50),
-
-              // welcome back, you've been missed!
               const Text(
-                'Welcome',
+                'LOGIN',
                 style: TextStyle(
                   color: WHITE,
                   fontSize: 30,
@@ -54,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 color: GREY,
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
 
               // password textfield
               MyTextField(
@@ -108,14 +99,50 @@ class LoginPage extends StatelessWidget {
                   textStyle: const TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.bold,
+                    color: BLACK,
                   ),
-                  color: GREY,
+                  color: WHITE,
                   context: context),
-
-              const SizedBox(height: 14),
-              const SizedBox(height: 3),
-
-              // not a member? sign up
+              const SizedBox(height: 30),
+              Text(
+                'OR',
+                style: TextStyle(
+                  color: WHITE,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Container(
+                      width: 60,
+                      height: 55,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: WHITE,
+                        image: DecorationImage(image: NetworkImage('url')),
+                      ),
+                      // child: Image(image: Ima),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 60,
+                    height: 55,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: WHITE,
+                    ),
+                    // child: Image(image: Ima),
+                  ),
+                ],
+              ),
+              SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -134,13 +161,13 @@ class LoginPage extends StatelessWidget {
                     child: const Text(
                       'SignUp',
                       style: TextStyle(
-                        color: GREY,
+                        color: YELLOW,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:mvvm_news_app/specs/colors.dart';
 
 class SignUpButton extends StatelessWidget {
   final Function()? onTap;
@@ -10,19 +13,21 @@ class SignUpButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(22),
+        height: 60,
+        width: 350,
+        padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.symmetric(horizontal: 40),
         decoration: BoxDecoration(
-          color: const Color(0xffffac30),
-          borderRadius: BorderRadius.circular(15),
+          color: WHITE,
+          borderRadius: BorderRadius.circular(10),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
             "Sign Up",
             style: TextStyle(
-              color: Colors.white,
+              color: BLACK,
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: 25,
             ),
           ),
         ),

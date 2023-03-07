@@ -23,29 +23,16 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: WHITE,
+      backgroundColor: BLACK,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 5),
-
-              // logo
-              Image.asset(
-                'asset/images/logo.png',
-                width: 168,
-                height: 42,
-              ),
-              const SizedBox(height: 30),
-
-              // You are welcome!
               const Text(
-                'You are welcome!',
+                'SIGN IN',
                 style: TextStyle(
-                  color: BLACK,
-                  fontSize: 20,
-                ),
+                    color: WHITE, fontSize: 20, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 25),
@@ -58,7 +45,7 @@ class SignUpPage extends StatelessWidget {
                 color: const Color.fromARGB(255, 250, 248, 248),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
 
               // email textfield
               MyTextField(
@@ -68,7 +55,7 @@ class SignUpPage extends StatelessWidget {
                 color: const Color.fromARGB(255, 250, 248, 248),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
 
               // phone number textfield
               MyTextField(
@@ -78,7 +65,7 @@ class SignUpPage extends StatelessWidget {
                 color: const Color.fromARGB(255, 250, 248, 248),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
 
               // password textfield
               MyTextField(
@@ -88,7 +75,7 @@ class SignUpPage extends StatelessWidget {
                 color: const Color.fromARGB(255, 250, 248, 248),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
 
               // password textfield
               MyTextField(
@@ -97,9 +84,7 @@ class SignUpPage extends StatelessWidget {
                 obscureText: false,
                 color: const Color.fromARGB(255, 250, 248, 248),
               ),
-
-              const SizedBox(height: 50),
-
+              const SizedBox(height: 35),
               // sign Up button
               SignUpButton(
                 onTap: () {
@@ -111,16 +96,53 @@ class SignUpPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
-              const SizedBox(height: 5),
-
+              Text(
+                'OR',
+                style: TextStyle(
+                  color: WHITE,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               //already a member! Sign in
+
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Container(
+                      width: 60,
+                      height: 55,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: WHITE,
+                        image: DecorationImage(image: NetworkImage('url')),
+                      ),
+                      // child: Image(image: Ima),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 60,
+                    height: 55,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: WHITE,
+                    ),
+                    // child: Image(image: Ima),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Already a member!',
-                    style: TextStyle(color: BLACK),
+                    style: TextStyle(color: WHITE),
                   ),
                   const SizedBox(width: 4),
                   GestureDetector(
@@ -139,7 +161,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
