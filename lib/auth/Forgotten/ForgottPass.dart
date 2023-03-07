@@ -5,7 +5,6 @@ import '../../components/my_textfield.dart';
 import '../../specs/colors.dart';
 import '../Otp/otp_screen.dart';
 
-
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
 
@@ -20,23 +19,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: WHITE,
+      backgroundColor: BLACK,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 5),
-
-              // logo
-              Image.asset(
-                'assets/eventzlogo.png',
-                width: 168,
-                height: 42,
-              ),
-              const SizedBox(height: 30),
-
-              // You are welcome!
               const Text(
                 'Forgot Password',
                 style: TextStyle(
@@ -83,10 +72,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   }),
                   text: 'Continue',
                   textStyle: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
-                  color: const Color.fromARGB(255, 2, 91, 24),
+                  color:  const Color.fromARGB(255, 246, 250, 247),
                   context: context),
             ],
           ),

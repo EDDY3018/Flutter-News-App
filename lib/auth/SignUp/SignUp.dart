@@ -32,7 +32,7 @@ class SignUpPage extends StatelessWidget {
               const Text(
                 'SIGN IN',
                 style: TextStyle(
-                    color: WHITE, fontSize: 20, fontWeight: FontWeight.bold),
+                    color: WHITE, fontSize: 25, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 25),
@@ -117,7 +117,9 @@ class SignUpPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: WHITE,
-                        image: DecorationImage(image: NetworkImage('url')),
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
                       ),
                       // child: Image(image: Ima),
                     ),
@@ -128,6 +130,9 @@ class SignUpPage extends StatelessWidget {
                     height: 55,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU')),
                       color: WHITE,
                     ),
                     // child: Image(image: Ima),

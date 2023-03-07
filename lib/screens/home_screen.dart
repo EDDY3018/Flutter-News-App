@@ -4,6 +4,7 @@ import 'package:mvvm_news_app/screens/health_screen.dart';
 import 'package:mvvm_news_app/screens/science_screen.dart';
 import 'package:mvvm_news_app/screens/technology_screen.dart';
 import 'package:mvvm_news_app/screens/top_headlines_screen.dart';
+import 'package:mvvm_news_app/specs/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
           ),
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           elevation: 0,
           bottom: TabBar(
             indicator: BoxDecoration(

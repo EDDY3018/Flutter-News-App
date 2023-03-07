@@ -119,26 +119,38 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Center(
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 60,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: WHITE,
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                        ),
+                        // child: Image(image: Ima),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  GestureDetector(
+                    onTap: () {},
                     child: Container(
                       width: 60,
                       height: 55,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: WHITE,
-                        image: DecorationImage(image: NetworkImage('url')),
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU'),
+                          fit: BoxFit.fill,
+                        ),
                       ),
                       // child: Image(image: Ima),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    width: 60,
-                    height: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: WHITE,
-                    ),
-                    // child: Image(image: Ima),
                   ),
                 ],
               ),

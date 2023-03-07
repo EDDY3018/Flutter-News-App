@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../../components/size.dart';
@@ -15,7 +19,7 @@ class OtpScreen extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         title: const Text("OTP Verification",
             style: TextStyle(
               color: WHITE,
@@ -30,13 +34,16 @@ class OtpScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
-                // Text(
-                //   "OTP Verification",
-                //   style: headingStyle,
-                // ),
+                Text(
+                  "OTP Verification",
+                  style: TextStyle(
+                    color: BLACK,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
                 const Text(
                   "We sent your code to +233 54 113  ***",
-                  style: TextStyle(color: WHITE),
+                  style: TextStyle(color: BLACK),
                 ),
                 buildTimer(),
                 const OtpForm(),
@@ -49,7 +56,7 @@ class OtpScreen extends StatelessWidget {
                     "Resend OTP Code",
                     style: TextStyle(
                       decoration: TextDecoration.underline,
-                      color: WHITE,
+                      color: BLACK,
                     ),
                   ),
                 )
