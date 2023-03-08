@@ -1,6 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/specs/colors.dart';
+import 'package:flutter_news_app/specs/colors.dart';
 
 import '../repository/news_api.dart';
 import '../view_model/article_view_model.dart';
@@ -100,7 +100,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
               itemCount: news == null ? 0 : news!.length,
               viewportFraction: 0.7,
               scale: 0.9,
-              autoplay: true,
+              autoplay: false,
             ),
           );
         }

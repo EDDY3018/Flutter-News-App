@@ -25,149 +25,151 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: BLACK,
       body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'SIGN IN',
-                style: TextStyle(
-                    color: WHITE, fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-
-              const SizedBox(height: 25),
-
-              // fullname textfield
-              MyTextField(
-                controller: fullnameController,
-                hintText: 'Full Name',
-                obscureText: false,
-                color: const Color.fromARGB(255, 250, 248, 248),
-              ),
-
-              const SizedBox(height: 20),
-
-              // email textfield
-              MyTextField(
-                controller: emailController,
-                hintText: 'Email',
-                obscureText: false,
-                color: const Color.fromARGB(255, 250, 248, 248),
-              ),
-
-              const SizedBox(height: 20),
-
-              // phone number textfield
-              MyTextField(
-                controller: phoneNumberController,
-                hintText: 'Phone Number',
-                obscureText: false,
-                color: const Color.fromARGB(255, 250, 248, 248),
-              ),
-
-              const SizedBox(height: 20),
-
-              // password textfield
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Password',
-                obscureText: false,
-                color: const Color.fromARGB(255, 250, 248, 248),
-              ),
-
-              const SizedBox(height: 20),
-
-              // password textfield
-              MyTextField(
-                controller: confirmPasswordController,
-                hintText: 'Confirm Password',
-                obscureText: false,
-                color: const Color.fromARGB(255, 250, 248, 248),
-              ),
-              const SizedBox(height: 35),
-              // sign Up button
-              SignUpButton(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
-                  );
-                },
-              ),
-
-              const SizedBox(height: 20),
-              Text(
-                'OR',
-                style: TextStyle(
-                  color: WHITE,
-                  fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                      color: WHITE, fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-              ),
-              //already a member! Sign in
 
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Center(
-                    child: Container(
+                const SizedBox(height: 25),
+
+                // fullname textfield
+                MyTextField(
+                  controller: fullnameController,
+                  hintText: 'Full Name',
+                  obscureText: false,
+                  color: const Color.fromARGB(255, 250, 248, 248),
+                ),
+
+                const SizedBox(height: 20),
+
+                // email textfield
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'Email',
+                  obscureText: false,
+                  color: const Color.fromARGB(255, 250, 248, 248),
+                ),
+
+                const SizedBox(height: 20),
+
+                // phone number textfield
+                MyTextField(
+                  controller: phoneNumberController,
+                  hintText: 'Phone Number',
+                  obscureText: false,
+                  color: const Color.fromARGB(255, 250, 248, 248),
+                ),
+
+                const SizedBox(height: 20),
+
+                // password textfield
+                MyTextField(
+                  controller: passwordController,
+                  hintText: 'Password',
+                  obscureText: false,
+                  color: const Color.fromARGB(255, 250, 248, 248),
+                ),
+
+                const SizedBox(height: 20),
+
+                // password textfield
+                MyTextField(
+                  controller: confirmPasswordController,
+                  hintText: 'Confirm Password',
+                  obscureText: false,
+                  color: const Color.fromARGB(255, 250, 248, 248),
+                ),
+                const SizedBox(height: 35),
+                // sign Up button
+                SignUpButton(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  },
+                ),
+
+                const SizedBox(height: 20),
+                Text(
+                  'OR',
+                  style: TextStyle(
+                    color: WHITE,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                //already a member! Sign in
+
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Container(
+                        width: 60,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: WHITE,
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                        ),
+                        // child: Image(image: Ima),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Container(
                       width: 60,
                       height: 55,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: WHITE,
                         image: DecorationImage(
                             image: NetworkImage(
-                                'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU')),
+                        color: WHITE,
                       ),
                       // child: Image(image: Ima),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    width: 60,
-                    height: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU')),
-                      color: WHITE,
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Already a member!',
+                      style: TextStyle(color: WHITE),
                     ),
-                    // child: Image(image: Ima),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Already a member!',
-                    style: TextStyle(color: WHITE),
-                  ),
-                  const SizedBox(width: 4),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
-                      );
-                    },
-                    child: const Text(
-                      'Sign In',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 243, 207, 6),
-                        fontWeight: FontWeight.bold,
+                    const SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
+                      },
+                      child: const Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 243, 207, 6),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
