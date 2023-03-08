@@ -100,7 +100,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
               itemCount: news == null ? 0 : news!.length,
               viewportFraction: 0.7,
               scale: 0.9,
-              autoplay: true,
+              autoplay: false,
             ),
           );
         }
