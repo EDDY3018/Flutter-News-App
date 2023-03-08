@@ -1,7 +1,7 @@
 // ignore_for_file: missing_required_param, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/screens/home_screen.dart';
+import 'package:flutter_news_app/screens/home_screen.dart';
 import '../../components/button.dart';
 import '../../components/my_textfield.dart';
 import '../../specs/colors.dart';

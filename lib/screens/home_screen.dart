@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/screens/general_screen.dart';
-import 'package:mvvm_news_app/screens/health_screen.dart';
-import 'package:mvvm_news_app/screens/science_screen.dart';
-import 'package:mvvm_news_app/screens/sports.dart';
-import 'package:mvvm_news_app/screens/technology_screen.dart';
-import 'package:mvvm_news_app/screens/top_headlines_screen.dart';
+import 'package:flutter_news_app/screens/general_screen.dart';
+import 'package:flutter_news_app/screens/health_screen.dart';
+import 'package:flutter_news_app/screens/science_screen.dart';
+import 'package:flutter_news_app/screens/sports.dart';
+import 'package:flutter_news_app/screens/technology_screen.dart';
+import 'package:flutter_news_app/screens/top_headlines_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

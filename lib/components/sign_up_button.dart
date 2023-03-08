@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/specs/colors.dart';
+import 'package:flutter_news_app/specs/colors.dart';
 
 class SignUpButton extends StatelessWidget {
   final Function()? onTap;

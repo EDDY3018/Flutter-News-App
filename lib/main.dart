@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/auth/Login/login.dart';
+import 'package:flutter_news_app/auth/Login/login.dart';
 
 void main() {
   runApp(const MyApp());
