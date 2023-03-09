@@ -6,6 +6,7 @@ import '../specs/colors.dart';
 import '../view_model/article_view_model.dart';
 import '../view_model/articles_view_model.dart';
 import 'article_details_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GeneralScreen extends StatefulWidget {
   const GeneralScreen({super.key});
@@ -51,8 +52,9 @@ class _GeneralScreenState extends State<GeneralScreen> {
                   }),
                   child: Stack(
                     children: [
+                   
                       Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(20),
                         child: ClipRRect(
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(35.0),
@@ -60,20 +62,28 @@ class _GeneralScreenState extends State<GeneralScreen> {
                             bottomLeft: Radius.circular(35.0),
                             bottomRight: Radius.circular(35.0),
                           ),
-                          child: Image.network(
-                            news[index]!.urlToImage,
+                          child: Container(
+                          height: 200,
+                         decoration: BoxDecoration(
+                          image: DecorationImage(
                             fit: BoxFit.cover,
-                            height: 400.0,
+                            image: NetworkImage(
+                               news[index]!.urlToImage,
+                            )
+                          )
+
+                          ),
+                          
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
+                      Positioned(
+                        top: 150,
                         child: Container(
-                          height: 200.0,
-                          width: 750.0,
+                          height: 150.0,
+                          width: 300.0,
                           child: Material(
-                            borderRadius: BorderRadius.circular(35.0),
+                            borderRadius: BorderRadius.circular(30.0),
                             elevation: 10.0,
                             child: Column(
                               children: [
@@ -90,10 +100,12 @@ class _GeneralScreenState extends State<GeneralScreen> {
                                 ),
                                 Column(
                                   children: [
+                                   
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 200.0, bottom: 10),
                                       child: FavoriteButton(
+                                        iconSize: 30,
                                         isFavorite: false,
                                         // iconDisabledColor: Colors.white,
                                         valueChanged: (isFavorite) {},
