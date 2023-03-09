@@ -67,7 +67,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     Navigator.push(
                       context,
                       // ignore: prefer_const_constructors
-                      MaterialPageRoute(builder: (context) => OtpScreen()),
+                      MaterialPageRoute(builder: (context) => OTP()),
                     );
                   }),
                   text: 'Continue',
@@ -75,7 +75,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
-                  color:  const Color.fromARGB(255, 246, 250, 247),
+                  color: const Color.fromARGB(255, 246, 250, 247),
                   context: context),
             ],
           ),

@@ -1,90 +1,173 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/auth/Login/login.dart';
+import 'package:flutter_news_app/specs/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pinput/pinput.dart';
 
-import '../../components/size.dart';
-import '../../specs/colors.dart';
-import 'components/otp_form.dart';
+class OTP extends StatefulWidget {
+  const OTP({Key? key}) : super(key: key);
 
-class OtpScreen extends StatelessWidget {
-  static String routeName = "/otp";
+  @override
+  State<OTP> createState() => _OTPState();
+}
 
-  const OtpScreen({super.key});
-
-  get headingStyle => null;
+class _OTPState extends State<OTP> {
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Text("OTP Verification",
-            style: TextStyle(
-              color: WHITE,
-            )),
-      ),
-      body: SizedBox(
-        width: double.infinity,
+      backgroundColor: BLACK,
+      body: SafeArea(
         child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.05),
-                Text(
-                  "OTP Verification",
-                  style: TextStyle(
-                    color: BLACK,
-                    fontWeight: FontWeight.w900,
-                  ),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: height * 0.07,
+              ),
+              Text(
+                'OTP Verification ',
+                style: GoogleFonts.urbanist(
+                  fontWeight: FontWeight.w700,
+                  color: WHITE,
+                  fontSize: 32.0,
                 ),
-                const Text(
-                  "We sent your code to +233 54 113  ***",
-                  style: TextStyle(color: BLACK),
+              ),
+              const SizedBox(
+                height: 8.0,
+              ),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          'Please enter the verification code that we have sent to your email ',
+                      style: GoogleFonts.urbanist(
+                        fontSize: 14.0,
+                        color: Color.fromARGB(255, 245, 246, 247),
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'edsafo@gmail.com ',
+                      style: GoogleFonts.urbanist(
+                        fontSize: 14.0,
+                        color: Color.fromARGB(255, 0, 224, 4),
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                      ),
+                    ),
+                  ],
                 ),
-                buildTimer(),
-                const OtpForm(),
-                SizedBox(height: SizeConfig.screenHeight * 0.1),
-                GestureDetector(
-                  onTap: () {
-                    // OTP code resend
-                  },
-                  child: const Text(
-                    "Resend OTP Code",
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: BLACK,
+              ),
+              SizedBox(
+                height: height * 0.1,
+              ),
+
+              /// pinput package we will use here
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: SizedBox(
+                  width: width,
+                  child: Pinput(
+                    length: 4,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    defaultPinTheme: PinTheme(
+                      height: 60.0,
+                      width: 60.0,
+                      textStyle: GoogleFonts.urbanist(
+                        fontSize: 24.0,
+                        color: WHITE,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: BLACK,
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 241, 238, 238)
+                              .withOpacity(0.5),
+                          width: 1.0,
+                        ),
+                      ),
+                    ),
+                    focusedPinTheme: PinTheme(
+                      height: 60.0,
+                      width: 60.0,
+                      textStyle: GoogleFonts.urbanist(
+                        fontSize: 24.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1.0,
+                        ),
+                      ),
                     ),
                   ),
-                )
-              ],
-            ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 16.0,
+              ),
+              Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Resend PIN',
+                    style: GoogleFonts.urbanist(
+                      fontSize: 14.0,
+                      color: WHITE,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ),
+
+              /// Continue Button
+              const Expanded(child: SizedBox()),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginPage()));
+                },
+                borderRadius: BorderRadius.circular(30.0),
+                child: Ink(
+                  height: 55.0,
+                  width: width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    color: WHITE,
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Continue',
+                      style: GoogleFonts.urbanist(
+                        fontSize: 15.0,
+                        color: BLACK,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 16.0,
+              ),
+            ],
           ),
         ),
       ),
-    );
-  }
-
-  Row buildTimer() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          "This code will expired in ",
-          style: TextStyle(color: WHITE),
-        ),
-        TweenAnimationBuilder(
-          tween: Tween(begin: 30.0, end: 0.0),
-          duration: const Duration(seconds: 30),
-          builder: (_, dynamic value, child) => Text(
-            "00:${value.toInt()}",
-            style: const TextStyle(color: Colors.orange),
-          ),
-        ),
-      ],
     );
   }
 }
