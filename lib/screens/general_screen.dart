@@ -1,6 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-
+import 'package:favorite_button/favorite_button.dart';
 import '../repository/news_api.dart';
 import '../specs/colors.dart';
 import '../view_model/article_view_model.dart';
@@ -88,6 +88,19 @@ class _GeneralScreenState extends State<GeneralScreen> {
                                     ),
                                   ),
                                 ),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 200.0, bottom: 10),
+                                      child: FavoriteButton(
+                                        isFavorite: false,
+                                        // iconDisabledColor: Colors.white,
+                                        valueChanged: (isFavorite) {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
                           ),
@@ -105,6 +118,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
           );
         }
       },
+      
     );
   }
 }

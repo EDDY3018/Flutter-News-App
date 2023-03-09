@@ -1,4 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app/specs/colors.dart';
 
@@ -87,6 +88,19 @@ class _ScienceScreenState extends State<ScienceScreen> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
+                                ),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 200.0, bottom: 10),
+                                      child: FavoriteButton(
+                                        isFavorite: false,
+                                        // iconDisabledColor: Colors.white,
+                                        valueChanged: (isFavorite) {},
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

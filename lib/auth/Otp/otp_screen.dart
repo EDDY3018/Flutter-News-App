@@ -47,7 +47,7 @@ class _OTPState extends State<OTP> {
                           'Please enter the verification code that we have sent to your email ',
                       style: GoogleFonts.urbanist(
                         fontSize: 14.0,
-                        color: Color.fromARGB(255, 245, 246, 247),
+                        color: const Color.fromARGB(255, 245, 246, 247),
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                       ),
@@ -56,7 +56,7 @@ class _OTPState extends State<OTP> {
                       text: 'edsafo@gmail.com ',
                       style: GoogleFonts.urbanist(
                         fontSize: 14.0,
-                        color: Color.fromARGB(255, 0, 224, 4),
+                        color: const Color.fromARGB(255, 0, 224, 4),
                         fontWeight: FontWeight.w400,
                         height: 1.5,
                       ),
@@ -121,7 +121,12 @@ class _OTPState extends State<OTP> {
               ),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    const CircularProgressIndicator(
+                      color: WHITE,
+                      
+                    );
+                  },
                   child: Text(
                     'Resend PIN',
                     style: GoogleFonts.urbanist(
