@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/screens/Home/home_screen.dart';
+import 'package:flutter_news_app/screens/allNews.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../specs/colors.dart';
+import '../technology_screen.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({super.key});
@@ -101,43 +104,51 @@ class Cartegories extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Container(
-                      width: 300,
-                      height: 350,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(255, 4, 10, 52),
-                            spreadRadius: 0,
-                            blurRadius: 10,
-                            offset: Offset(
-                              0,
-                              7,
-                            ), // changes position of shadow
-                          ),
-                        ],
-                        image: DecorationImage(
-                          image: AssetImage('assets/tech.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(25.0),
-                            child: Text(
-                              'Tecnology',
-                              style: GoogleFonts.montserrat(
-                                  textStyle: TextStyle(
-                                      color: WHITE,
-                                      fontSize: 27,
-                                      fontWeight: FontWeight.bold)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeForAll()));
+                      },
+                      child: Container(
+                        width: 300,
+                        height: 350,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 4, 10, 52),
+                              spreadRadius: 0,
+                              blurRadius: 10,
+                              offset: Offset(
+                                0,
+                                7,
+                              ), // changes position of shadow
                             ),
+                          ],
+                          image: DecorationImage(
+                            image: AssetImage('assets/tech.jpg'),
+                            fit: BoxFit.cover,
                           ),
-                        ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(25.0),
+                              child: Text(
+                                'Tecnology',
+                                style: GoogleFonts.montserrat(
+                                    textStyle: TextStyle(
+                                        color: WHITE,
+                                        fontSize: 27,
+                                        fontWeight: FontWeight.bold)),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -313,34 +324,59 @@ class Cartegories extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 120,
-                        height: 35,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(232, 223, 236, 247),
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Center(
-                          child: Text(
-                            'CAREERS',
-                            style: GoogleFonts.montserrat(
-                                textStyle: TextStyle(
-                                    color: BLUE,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold)),
+                      Padding(
+                        padding: const EdgeInsets.all(25.0),
+                        child: Container(
+                          width: 120,
+                          height: 35,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(232, 223, 236, 247),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Center(
+                            child: Text(
+                              'CAREERS',
+                              style: GoogleFonts.montserrat(
+                                  textStyle: TextStyle(
+                                      color: BLUE,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        width: 150,
-                        height: 250,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(19),
-                          image: DecorationImage(
-                            image: AssetImage('assets/carrer.jpg'),
-                            fit: BoxFit.fill,
+                      Row(
+                        children: [
+                          Container(
+                            width: 150,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(19),
+                              image: DecorationImage(
+                                image: AssetImage('assets/carrer.jpg'),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
                           ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 45.0, left: 20),
+                        child: Text(
+                          '20 Worst Jobs \nfor the Futurexvsvsdvdsvsdvdsvd',
+                          style: GoogleFonts.montserrat(
+                              textStyle: TextStyle(
+                                  color: BLUE,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ),
                       ),
                     ],

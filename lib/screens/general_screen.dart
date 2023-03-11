@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:favorite_button/favorite_button.dart';
@@ -52,7 +54,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
                   child: Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(0.2),
                         child: ClipRRect(
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(35.0),
@@ -63,14 +65,15 @@ class _GeneralScreenState extends State<GeneralScreen> {
                           child: Image.network(
                             news[index]!.urlToImage,
                             fit: BoxFit.cover,
-                            height: 400.0,
+                            height: 500.0,
+                            width: 300,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 450.0, 0.0, 0),
                         child: Container(
-                          height: 200.0,
+                          height: 290.0,
                           width: 750.0,
                           child: Material(
                             borderRadius: BorderRadius.circular(35.0),
@@ -83,21 +86,17 @@ class _GeneralScreenState extends State<GeneralScreen> {
                                   child: Text(
                                     news[index].title,
                                     style: const TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ),
-                                Column(
+                                Row(
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 200.0, bottom: 10),
-                                      child: FavoriteButton(
-                                        isFavorite: false,
-                                        // iconDisabledColor: Colors.white,
-                                        valueChanged: (isFavorite) {},
-                                      ),
+                                    Column(
+                                      children: [
+                                        IconButton(icon: Icon(Icons.favorite))
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -118,7 +117,6 @@ class _GeneralScreenState extends State<GeneralScreen> {
           );
         }
       },
-      
     );
   }
 }

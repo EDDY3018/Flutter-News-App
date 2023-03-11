@@ -6,13 +6,13 @@ import 'package:flutter_news_app/screens/sports.dart';
 import 'package:flutter_news_app/screens/technology_screen.dart';
 import 'package:flutter_news_app/screens/top_headlines_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeForAll extends StatelessWidget {
+  const HomeForAll({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
