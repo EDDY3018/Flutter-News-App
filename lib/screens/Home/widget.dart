@@ -304,41 +304,52 @@ class Cartegories extends StatelessWidget {
         ),
         Column(
           children: [
-            Center(
-              child: Container(
-                  width: 360,
-                  height: 150,
-                  decoration: BoxDecoration(
-                      color: BLACK, borderRadius: BorderRadius.circular(20)),
-                  child: Column(
+            Container(
+              width: 390,
+              height: 250,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 4, 1, 1),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(17.0),
-                            child: Container(
-                              width: 120,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                  color: Color.fromARGB(232, 177, 197, 213),
-                                  borderRadius: BorderRadius.circular(5)),
-                              child: Text(
-                                'CAREERS',
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: BLUE,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold)),
-                              ),
-                            ),
-                          )
-                        ],
+                      Container(
+                        width: 120,
+                        height: 35,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(232, 223, 236, 247),
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Center(
+                          child: Text(
+                            'CAREERS',
+                            style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    color: BLUE,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 150,
+                        height: 250,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(19),
+                          image: DecorationImage(
+                            image: AssetImage('assets/carrer.jpg'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
                       ),
                     ],
-                  )),
-            )
+                  ),
+                ],
+              ),
+            ),
           ],
-        )
+        ),
       ],
     );
   }
@@ -346,5 +357,30 @@ class Cartegories extends StatelessWidget {
 
 
 /*
+ SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'data',
+                      style: GoogleFonts.montserrat(
+                          textStyle: TextStyle(
+                              color: BLUE,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
+                    ),
 
+
+
+                    Container(
+                          width: 150,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(19),
+                            image: DecorationImage(
+                              image: AssetImage('assets/carrer.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
 */
+
