@@ -1,7 +1,9 @@
-// ignore_for_file: missing_required_param, prefer_const_constructors
+// ignore_for_file: missing_required_param, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/screens/Home/widget.dart';
 import 'package:flutter_news_app/screens/home_screen.dart';
+import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import '../../components/button.dart';
 import '../../components/my_textfield.dart';
 import '../../specs/colors.dart';
@@ -16,7 +18,6 @@ class LoginPage extends StatelessWidget {
   final passwordController = TextEditingController();
 
   // sign user in method
-  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +94,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: (() {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => HomeHeader()),
                     );
                   }),
                   text: 'Sign In',
@@ -186,5 +187,6 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+    return Scaffold();
   }
 }
