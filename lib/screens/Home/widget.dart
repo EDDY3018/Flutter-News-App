@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -319,7 +318,7 @@ class Cartegories extends StatelessWidget {
                             padding: const EdgeInsets.all(17.0),
                             child: Container(
                               width: 120,
-                              height: 50,
+                              height: 35,
                               decoration: BoxDecoration(
                                   color: Color.fromARGB(232, 177, 197, 213),
                                   borderRadius: BorderRadius.circular(5)),
@@ -328,7 +327,7 @@ class Cartegories extends StatelessWidget {
                                 style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
                                         color: BLUE,
-                                        fontSize: 10,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold)),
                               ),
                             ),
