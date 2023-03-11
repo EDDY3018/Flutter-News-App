@@ -1,6 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:mvvm_news_app/specs/colors.dart';
+import 'package:flutter_news_app/specs/colors.dart';
 
 import '../repository/news_api.dart';
 import '../view_model/article_view_model.dart';
