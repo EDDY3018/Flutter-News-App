@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:card_swiper/card_swiper.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
@@ -64,55 +66,76 @@ class _ScienceScreenState extends State<ScienceScreen> {
                           child: Image.network(
                             news[index]!.urlToImage,
                             fit: BoxFit.cover,
-                            height: 400.0,
+                            height: 600.0,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
-                        child: Container(
-                          height: 200.0,
-                          width: 750.0,
-                          child: Material(
-                            borderRadius: BorderRadius.circular(35.0),
-                            elevation: 10.0,
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
-                                  child: Text(
-                                    news[index].title,
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                Column(
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
+                            child: Container(
+                              height: 200.0,
+                              child: Material(
+                                borderRadius: BorderRadius.circular(35.0),
+                                elevation: 5.0,
+                                child: Column(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 200.0, bottom: 10),
-                                      child: FavoriteButton(
-                                        isFavorite: false,
-                                        // iconDisabledColor: Colors.white,
-                                        valueChanged: (isFavorite) {},
+                                      padding: const EdgeInsets.fromLTRB(
+                                          10, 20, 10, 20),
+                                      child: Text(
+                                        news[index].title,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            IconButton(
+                                                icon: Icon(
+                                                    Icons.ios_share_rounded))
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            IconButton(
+                                              icon: Icon(
+                                                  Icons.bookmark_border_sharp),
+                                              color: BLACK,
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            IconButton(
+                                              icon: Icon(Icons.favorite),
+                                              color: BLACK,
+                                            )
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
                 );
               },
               itemCount: news == null ? 0 : news!.length,
-              viewportFraction: 0.7,
+              viewportFraction: 1,
               scale: 0.9,
               autoplay: false,
             ),

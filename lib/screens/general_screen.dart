@@ -26,7 +26,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(
-            color: WHITE,
+            color: Color.fromARGB(224, 255, 255, 255),
           );
         } else {
           var news = snapshot.data;
@@ -54,7 +54,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
                   child: Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(0.2),
+                        padding: const EdgeInsets.all(10),
                         child: ClipRRect(
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(35.0),
@@ -65,52 +65,77 @@ class _GeneralScreenState extends State<GeneralScreen> {
                           child: Image.network(
                             news[index]!.urlToImage,
                             fit: BoxFit.cover,
-                            height: 500.0,
-                            width: 300,
+                            height: 600.0,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 450.0, 0.0, 0),
-                        child: Container(
-                          height: 290.0,
-                          width: 750.0,
-                          child: Material(
-                            borderRadius: BorderRadius.circular(35.0),
-                            elevation: 10.0,
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
-                                  child: Text(
-                                    news[index].title,
-                                    style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                Row(
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
+                            child: Container(
+                              height: 200.0,
+                              width: 750.0,
+                              child: Material(
+                                borderRadius: BorderRadius.circular(35.0),
+                                elevation: 5.0,
+                                child: Column(
                                   children: [
-                                    Column(
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(
+                                          10, 20, 10, 20),
+                                      child: Text(
+                                        news[index].title,
+                                        style: const TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        IconButton(icon: Icon(Icons.favorite))
+                                        Column(
+                                          children: [
+                                            IconButton(
+                                                icon: Icon(
+                                                    Icons.ios_share_rounded))
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            IconButton(
+                                              icon: Icon(
+                                                  Icons.bookmark_border_sharp),
+                                              color: BLACK,
+                                            )
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            IconButton(
+                                              icon: Icon(Icons.favorite),
+                                              color: BLACK,
+                                            )
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
                 );
               },
               itemCount: news == null ? 0 : news!.length,
-              viewportFraction: 0.7,
+              viewportFraction: 1,
               scale: 0.9,
               autoplay: false,
             ),
