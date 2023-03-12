@@ -3,6 +3,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 import '../repository/news_api.dart';
 import '../specs/colors.dart';
@@ -101,6 +102,7 @@ class _TechnologyScreenState extends State<TechnologyScreen> {
                                         Column(
                                           children: [
                                             IconButton(
+                                              onPressed: sharePressed,
                                                 icon: Icon(
                                                     Icons.ios_share_rounded))
                                           ],
@@ -145,4 +147,18 @@ class _TechnologyScreenState extends State<TechnologyScreen> {
       },
     );
   }
+}
+
+void sharePressed() {
+  String message = 'Check out Accra Techinical University, where you can become an '
+      'Hello Wolrd Programmers : https://eclectify-universtiy.web.app';
+  Share.share(message);
+
+  /// optional subject that will be used when sharing to email
+  // Share.share(message, subject: 'Become An Elite Flutter Developer');
+
+  /// share a file
+  // Share.shareFiles(['${directory.path}/image.jpg'], text: 'Great picture');
+  /// share multiple files
+  // Share.shareFiles(['${directory.path}/image1.jpg', '${directory.path}/image2.jpg']);
 }

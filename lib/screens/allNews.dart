@@ -17,7 +17,7 @@ class HomeForAll extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Text(
-            "News App",
+            "News ",
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
           ),
