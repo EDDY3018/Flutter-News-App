@@ -319,69 +319,9 @@ class Cartegories extends StatelessWidget {
               width: 390,
               height: 250,
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 4, 1, 1),
-                  borderRadius: BorderRadius.circular(20)),
-              child: Column(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Container(
-                          width: 120,
-                          height: 35,
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(232, 223, 236, 247),
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Center(
-                            child: Text(
-                              'CAREERS',
-                              style: GoogleFonts.montserrat(
-                                  textStyle: TextStyle(
-                                      color: BLUE,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            width: 150,
-                            height: 150,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(19),
-                              image: DecorationImage(
-                                image: AssetImage('assets/carrer.jpg'),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 45.0, left: 20),
-                        child: Text(
-                          '20 Worst Jobs \nfor the Futurexvsvsdvdsvsdvdsvd',
-                          style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                  color: BLUE,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                color: Color.fromARGB(255, 4, 1, 1),
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(image: AssetImage('assets/L1.JPG')),
               ),
             ),
           ],
@@ -390,6 +330,8 @@ class Cartegories extends StatelessWidget {
     );
   }
 }
+
+
 
 
 /*

@@ -119,8 +119,7 @@ class SignUpPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: WHITE,
                           image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                              image: AssetImage('assets/apple.png')),
                         ),
                         // child: Image(image: Ima),
                       ),
@@ -132,8 +131,7 @@ class SignUpPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: DecorationImage(
-                            image: NetworkImage(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU')),
+                            image: AssetImage('assets/google.jpg')),
                         color: WHITE,
                       ),
                       // child: Image(image: Ima),

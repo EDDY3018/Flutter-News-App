@@ -94,7 +94,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: (() {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeHeader()),
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   }),
                   text: 'Sign In',
@@ -128,10 +128,9 @@ class LoginPage extends StatelessWidget {
                         height: 55,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: WHITE,
+                          color: BLACK,
                           image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                              image: AssetImage('assets/apple.png')),
                         ),
                         // child: Image(image: Ima),
                       ),
@@ -145,11 +144,9 @@ class LoginPage extends StatelessWidget {
                       height: 55,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
+                        color: BLACK,
                         image: DecorationImage(
-                          image: NetworkImage(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU'),
-                          fit: BoxFit.fill,
-                        ),
+                            image: AssetImage('assets/google.jpg')),
                       ),
                       // child: Image(image: Ima),
                     ),
@@ -187,6 +184,5 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
-    return Scaffold();
   }
 }
