@@ -37,25 +37,6 @@ class _HomeHeaderState extends State<HomeHeader> {
                             fontSize: 27,
                             fontWeight: FontWeight.bold)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 69),
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        width: 60,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: IconButton(
-                          onPressed: (){},
-                          icon: Icon(Icons.menu),
-                          iconSize: 40,
-                          color: BLACK,
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),

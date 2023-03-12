@@ -3,19 +3,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app/screens/Home/widget.dart';
 
+import '../../Drawer/drawer.dart';
+import '../../config/navigation.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _globalKey,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
+      endDrawer: SafeArea(
+        child: drawerWidget(
+          context: context,
+          onItem: (item) => navigation(
+            context: context,
+            pageName: item,
+          ),
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           AspectRatio(
-            aspectRatio: 1.5,
+            aspectRatio: 2.7,
             child: GridView.builder(
               itemCount: 1,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
