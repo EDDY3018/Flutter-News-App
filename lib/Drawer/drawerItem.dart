@@ -1,5 +1,6 @@
-import 'package:eventz/specs/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../specs/colors.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem(

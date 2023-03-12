@@ -1,7 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app/screens/Home/home_screen.dart';
 
+import '../auth/Login/login.dart';
+import '../screens/Favorite/favorite.dart';
+import '../screens/Profile/profile.dart';
 import '../specs/colors.dart';
 import 'drawerItem.dart';
 
@@ -57,17 +59,6 @@ class NavigationDrawer extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              DrawerItem(
-                name: 'Chat Bot',
-                icon: Icons.message_outlined,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ChatBot(),
-                      ));
-                },
-              ),
               const SizedBox(
                 height: 30,
               ),
@@ -78,7 +69,7 @@ class NavigationDrawer extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MyTicket(),
+                        builder: (context) => Favorite(),
                       ));
                 },
               ),
@@ -92,17 +83,6 @@ class NavigationDrawer extends StatelessWidget {
               ),
               const SizedBox(
                 height: 30,
-              ),
-              DrawerItem(
-                name: 'Settings',
-                icon: Icons.settings,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Settings(),
-                      ));
-                },
               ),
               const SizedBox(
                 height: 30,
@@ -130,7 +110,7 @@ class NavigationDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+            context, MaterialPageRoute(builder: (context) => const HomeScreen()));
         break;
     }
   }
