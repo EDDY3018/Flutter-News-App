@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_news_app/screens/Home/widget.dart';
-import 'package:flutter_news_app/screens/allNews.dart';
+import 'package:flutter_news_app/screens/Home/allNews.dart';
 import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import '../../components/button.dart';
 import '../../components/my_textfield.dart';

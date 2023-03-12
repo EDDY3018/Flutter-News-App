@@ -1,34 +1,33 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:card_swiper/card_swiper.dart';
-import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import '../../repository/news_api.dart';
+import '../../specs/colors.dart';
+import '../../view_model/article_view_model.dart';
+import '../../view_model/articles_view_model.dart';
+import '../Article Details/article_details_screen.dart';
+import 'package:share/share.dart';
 
-import '../repository/news_api.dart';
-import '../specs/colors.dart';
-import '../view_model/article_view_model.dart';
-import '../view_model/articles_view_model.dart';
-import 'article_details_screen.dart';
-
-class TopHeadlinesScreen extends StatefulWidget {
-  const TopHeadlinesScreen({Key? key}) : super(key: key);
+class GeneralScreen extends StatefulWidget {
+  const GeneralScreen({super.key});
 
   @override
-  State<TopHeadlinesScreen> createState() => _TopHeadlinesScreenState();
+  State<GeneralScreen> createState() => _GeneralScreenState();
 }
 
-class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
+class _GeneralScreenState extends State<GeneralScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleViewModel>>(
-      future: articlesListViewModel.fetchAllNews(),
+      future: articlesListViewModel.fetchNewsGeneral(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(
-            color: WHITE,
+            color: Color.fromARGB(224, 255, 255, 255),
           );
         } else {
           var news = snapshot.data;
@@ -79,9 +78,10 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
                                 const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
                             child: Container(
                               height: 200.0,
+                              width: 750.0,
                               child: Material(
                                 borderRadius: BorderRadius.circular(35.0),
-                                elevation: 10.0,
+                                elevation: 5.0,
                                 child: Column(
                                   children: [
                                     Padding(
@@ -90,7 +90,7 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
                                       child: Text(
                                         news[index].title,
                                         style: const TextStyle(
-                                          fontSize: 16,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -138,7 +138,7 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
               },
               itemCount: news == null ? 0 : news!.length,
               viewportFraction: 1,
-              scale: 0.10,
+              scale: 0.9,
               autoplay: false,
             ),
           );
@@ -149,8 +149,7 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
 }
 
 void sharePressed() {
-  String message =
-      'Check out Accra Techinical University, where you can become an '
+  String message = 'Check out Accra Techinical University, where you can become an '
       'Hello Wolrd Programmers : https://eclectify-universtiy.web.app';
   Share.share(message);
 

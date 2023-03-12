@@ -5,26 +5,26 @@ import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
-import '../repository/news_api.dart';
-import '../specs/colors.dart';
-import '../view_model/article_view_model.dart';
-import '../view_model/articles_view_model.dart';
-import 'article_details_screen.dart';
+import '../../repository/news_api.dart';
+import '../../specs/colors.dart';
+import '../../view_model/article_view_model.dart';
+import '../../view_model/articles_view_model.dart';
+import '../Article Details/article_details_screen.dart';
 
-class HealthScreen extends StatefulWidget {
-  const HealthScreen({super.key});
+class TechnologyScreen extends StatefulWidget {
+  const TechnologyScreen({super.key});
 
   @override
-  State<HealthScreen> createState() => _HealthScreenState();
+  State<TechnologyScreen> createState() => _TechnologyScreenState();
 }
 
-class _HealthScreenState extends State<HealthScreen> {
+class _TechnologyScreenState extends State<TechnologyScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleViewModel>>(
-      future: articlesListViewModel.fetchNewsHealth(),
+      future: articlesListViewModel.fetchNewsTechnology(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(
@@ -82,7 +82,7 @@ class _HealthScreenState extends State<HealthScreen> {
                               width: 750.0,
                               child: Material(
                                 borderRadius: BorderRadius.circular(35.0),
-                                elevation: 5.0,
+                                elevation: 10.0,
                                 child: Column(
                                   children: [
                                     Padding(
@@ -102,7 +102,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                         Column(
                                           children: [
                                             IconButton(
-                                                onPressed: sharePressed,
+                                              onPressed: sharePressed,
                                                 icon: Icon(
                                                     Icons.ios_share_rounded))
                                           ],

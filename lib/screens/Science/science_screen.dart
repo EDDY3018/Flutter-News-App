@@ -3,28 +3,28 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/specs/colors.dart';
 import 'package:share/share.dart';
 
-import '../repository/news_api.dart';
-import '../specs/colors.dart';
-import '../view_model/article_view_model.dart';
-import '../view_model/articles_view_model.dart';
-import 'article_details_screen.dart';
+import '../../repository/news_api.dart';
+import '../../view_model/article_view_model.dart';
+import '../../view_model/articles_view_model.dart';
+import '../Article Details/article_details_screen.dart';
 
-class TechnologyScreen extends StatefulWidget {
-  const TechnologyScreen({super.key});
+class ScienceScreen extends StatefulWidget {
+  const ScienceScreen({super.key});
 
   @override
-  State<TechnologyScreen> createState() => _TechnologyScreenState();
+  State<ScienceScreen> createState() => _ScienceScreenState();
 }
 
-class _TechnologyScreenState extends State<TechnologyScreen> {
+class _ScienceScreenState extends State<ScienceScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleViewModel>>(
-      future: articlesListViewModel.fetchNewsTechnology(),
+      future: articlesListViewModel.fetchNewsScience(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(
@@ -79,10 +79,9 @@ class _TechnologyScreenState extends State<TechnologyScreen> {
                                 const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
                             child: Container(
                               height: 200.0,
-                              width: 750.0,
                               child: Material(
                                 borderRadius: BorderRadius.circular(35.0),
-                                elevation: 10.0,
+                                elevation: 5.0,
                                 child: Column(
                                   children: [
                                     Padding(

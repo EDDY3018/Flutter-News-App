@@ -5,26 +5,26 @@ import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
-import '../repository/news_api.dart';
-import '../specs/colors.dart';
-import '../view_model/article_view_model.dart';
-import '../view_model/articles_view_model.dart';
-import 'article_details_screen.dart';
+import '../../repository/news_api.dart';
+import '../../specs/colors.dart';
+import '../../view_model/article_view_model.dart';
+import '../../view_model/articles_view_model.dart';
+import '../Article Details/article_details_screen.dart';
 
-class SportsScreen extends StatefulWidget {
-  const SportsScreen({super.key});
+class HealthScreen extends StatefulWidget {
+  const HealthScreen({super.key});
 
   @override
-  State<SportsScreen> createState() => _SportsScreenState();
+  State<HealthScreen> createState() => _HealthScreenState();
 }
 
-class _SportsScreenState extends State<SportsScreen> {
+class _HealthScreenState extends State<HealthScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<ArticleViewModel>>(
-      future: articlesListViewModel.fetchNewsScience(),
+      future: articlesListViewModel.fetchNewsHealth(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator(
@@ -79,9 +79,10 @@ class _SportsScreenState extends State<SportsScreen> {
                                 const EdgeInsets.fromLTRB(0, 350.0, 0.0, 0),
                             child: Container(
                               height: 200.0,
+                              width: 750.0,
                               child: Material(
                                 borderRadius: BorderRadius.circular(35.0),
-                                elevation: 10.0,
+                                elevation: 5.0,
                                 child: Column(
                                   children: [
                                     Padding(
@@ -101,7 +102,7 @@ class _SportsScreenState extends State<SportsScreen> {
                                         Column(
                                           children: [
                                             IconButton(
-                                              onPressed: sharePressed,
+                                                onPressed: sharePressed,
                                                 icon: Icon(
                                                     Icons.ios_share_rounded))
                                           ],

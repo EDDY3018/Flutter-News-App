@@ -3,22 +3,22 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app/specs/colors.dart';
 import 'package:share/share.dart';
 
-import '../repository/news_api.dart';
-import '../view_model/article_view_model.dart';
-import '../view_model/articles_view_model.dart';
-import 'article_details_screen.dart';
+import '../../repository/news_api.dart';
+import '../../specs/colors.dart';
+import '../../view_model/article_view_model.dart';
+import '../../view_model/articles_view_model.dart';
+import '../Article Details/article_details_screen.dart';
 
-class ScienceScreen extends StatefulWidget {
-  const ScienceScreen({super.key});
+class SportsScreen extends StatefulWidget {
+  const SportsScreen({super.key});
 
   @override
-  State<ScienceScreen> createState() => _ScienceScreenState();
+  State<SportsScreen> createState() => _SportsScreenState();
 }
 
-class _ScienceScreenState extends State<ScienceScreen> {
+class _SportsScreenState extends State<SportsScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
 
   @override
@@ -81,7 +81,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
                               height: 200.0,
                               child: Material(
                                 borderRadius: BorderRadius.circular(35.0),
-                                elevation: 5.0,
+                                elevation: 10.0,
                                 child: Column(
                                   children: [
                                     Padding(
