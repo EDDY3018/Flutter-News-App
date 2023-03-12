@@ -1,12 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import 'package:flutter_news_app/screens/Home/allNews.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../specs/colors.dart';
-import '../Technology/technology_screen.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({super.key});
@@ -50,6 +48,7 @@ class _HomeHeaderState extends State<HomeHeader> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: IconButton(
+                          onPressed: (){},
                           icon: Icon(Icons.menu),
                           iconSize: 40,
                           color: BLACK,

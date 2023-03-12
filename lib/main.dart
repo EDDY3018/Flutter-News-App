@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app/Splash/splash.dart';
-import 'package:flutter_news_app/screens/Home/home_screen.dart';
+import 'package:flutter_news_app/screens/Splash/splash.dart';
 
-import 'auth/Login/login.dart';
 
 void main() {
   runApp(const MyApp());

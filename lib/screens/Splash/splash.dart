@@ -6,7 +6,7 @@ import 'package:flutter_news_app/auth/SignUp/SignUp.dart';
 import 'package:flutter_news_app/components/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../specs/colors.dart';
+import '../../specs/colors.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
