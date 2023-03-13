@@ -101,7 +101,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
                                         Column(
                                           children: [
                                             IconButton(
-                                              onPressed: sharePressed,
+                                                onPressed: sharePressed,
                                                 icon: Icon(
                                                     Icons.ios_share_rounded))
                                           ],
@@ -149,7 +149,8 @@ class _ScienceScreenState extends State<ScienceScreen> {
 }
 
 void sharePressed() {
-  String message = 'Check out Accra Techinical University, where you can become an '
+  String message =
+      'Check out Accra Techinical University, where you can become an '
       'Hello Wolrd Programmers : https://eclectify-universtiy.web.app';
   Share.share(message);
 

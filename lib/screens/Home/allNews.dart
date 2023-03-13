@@ -17,7 +17,7 @@ class HomeForAll extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Text(
-            "News ",
+            "24/7 News ",
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
           ),
@@ -30,10 +30,10 @@ class HomeForAll extends StatelessWidget {
             isScrollable: true,
             tabs: const [
               Tab(text: "General"),
+              Tab(text: "Top headlines"),
               Tab(text: "Health"),
               Tab(text: "Technology"),
               Tab(text: "Science"),
-              Tab(text: "Top headlines"),
               Tab(text: "Sports"),
             ],
           ),

@@ -3,12 +3,11 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../repository/news_api.dart';
-import '../../specs/colors.dart';
 import '../../view_model/article_view_model.dart';
 import '../../view_model/articles_view_model.dart';
 import '../Article Details/article_details_screen.dart';
-import 'package:share/share.dart';
 
 class GeneralScreen extends StatefulWidget {
   const GeneralScreen({super.key});
@@ -19,6 +18,26 @@ class GeneralScreen extends StatefulWidget {
 
 class _GeneralScreenState extends State<GeneralScreen> {
   var articlesListViewModel = ArticlesListViewModel(classRepository: NewsApi());
+  static const likedKey = 'likedKey';
+  late bool liked = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _restorePersistedPreference();
+  }
+
+  void _restorePersistedPreference() async {
+    var preferences = await SharedPreferences.getInstance();
+    var liked = preferences.getBool(likedKey);
+    setState(() => this.liked = liked!);
+  }
+
+  void _persistPerference() async {
+    setState(() => liked = liked);
+    var preferences = await SharedPreferences.getInstance();
+    preferences.setBool(likedKey, liked);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,18 +128,24 @@ class _GeneralScreenState extends State<GeneralScreen> {
                                         Row(
                                           children: [
                                             IconButton(
-                                              icon: Icon(
-                                                  Icons.bookmark_border_sharp),
-                                              color: BLACK,
-                                            )
+                                                onPressed: () {},
+                                                icon:
+                                                    Icon(Icons.bookmark_border))
                                           ],
                                         ),
                                         Row(
                                           children: [
                                             IconButton(
-                                              icon: Icon(Icons.favorite),
-                                              color: BLACK,
-                                            )
+                                              icon: Icon(
+                                                  liked
+                                                      ? Icons.favorite
+                                                      : Icons.favorite_border,
+                                                  color: liked
+                                                      ? Colors.grey
+                                                      : Colors.red),
+                                              onPressed: (() =>
+                                                  _persistPerference),
+                                            ),
                                           ],
                                         ),
                                       ],
@@ -149,7 +174,8 @@ class _GeneralScreenState extends State<GeneralScreen> {
 }
 
 void sharePressed() {
-  String message = 'Check out Accra Techinical University, where you can become an '
+  String message =
+      'Check out Accra Techinical University, where you can become an '
       'Hello Wolrd Programmers : https://eclectify-universtiy.web.app';
   Share.share(message);
 

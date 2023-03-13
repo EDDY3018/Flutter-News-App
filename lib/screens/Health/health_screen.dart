@@ -150,7 +150,8 @@ class _HealthScreenState extends State<HealthScreen> {
 }
 
 void sharePressed() {
-  String message = 'Check out Accra Techinical University, where you can become an '
+  String message =
+      'Check out Accra Techinical University, where you can become an '
       'Hello Wolrd Programmers : https://eclectify-universtiy.web.app';
   Share.share(message);
 

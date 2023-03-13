@@ -279,7 +279,12 @@ class Cartegories extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeForAll()));
+                      },
                       child: Text(
                         'More',
                         style: GoogleFonts.montserrat(
@@ -315,30 +320,6 @@ class Cartegories extends StatelessWidget {
 
 
 /*
- SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'data',
-                      style: GoogleFonts.montserrat(
-                          textStyle: TextStyle(
-                              color: BLUE,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ),
-
-
-
-                    Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(19),
-                            image: DecorationImage(
-                              image: AssetImage('assets/carrer.jpg'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+ 
 */
 
