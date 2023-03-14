@@ -6,7 +6,7 @@ Widget button({
   @required void Function()? onPressed,
   void Function()? onLongPressed,
   @required String? text,
-  @required Color? color,
+  Color? color,
   Color textColor = BLACK,
   bool colorFill = true,
   @required BuildContext? context,
@@ -25,7 +25,7 @@ Widget button({
   Widget? postFixIcon,
   ButtonStyle? style,
   Widget? icon,
-  required EdgeInsets margin,
+  EdgeInsets? margin,
 }) {
   return SizedBox(
     width: useWidth ? MediaQuery.of(context!).size.width * divideWidth : null,

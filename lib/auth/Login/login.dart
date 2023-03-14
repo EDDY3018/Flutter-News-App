@@ -1,7 +1,9 @@
-// ignore_for_file: missing_required_param, prefer_const_constructors
+// ignore_for_file: missing_required_param, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app/screens/home_screen.dart';
+import 'package:flutter_news_app/screens/Home/widget.dart';
+import 'package:flutter_news_app/screens/Home/allNews.dart';
+import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import '../../components/button.dart';
 import '../../components/my_textfield.dart';
 import '../../specs/colors.dart';
@@ -16,7 +18,6 @@ class LoginPage extends StatelessWidget {
   final passwordController = TextEditingController();
 
   // sign user in method
-  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -127,10 +128,9 @@ class LoginPage extends StatelessWidget {
                         height: 55,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: WHITE,
+                          color: BLACK,
                           image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://alchemyimmersive.com/wp-content/uploads/sites/4/2020/04/apple-logo-transparent.png')),
+                              image: AssetImage('assets/apple.png')),
                         ),
                         // child: Image(image: Ima),
                       ),
@@ -144,11 +144,9 @@ class LoginPage extends StatelessWidget {
                       height: 55,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
+                        color: BLACK,
                         image: DecorationImage(
-                          image: NetworkImage(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU'),
-                          fit: BoxFit.fill,
-                        ),
+                            image: AssetImage('assets/google.jpg')),
                       ),
                       // child: Image(image: Ima),
                     ),
