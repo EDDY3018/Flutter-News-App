@@ -89,6 +89,7 @@ class LoginPage extends StatelessWidget {
                   height: 62,
                   divideWidth: 0.8,
                   borderRadiusGeometry: BorderRadius.circular(15),
+                  
                   margin:
                       const EdgeInsets.symmetric(horizontal: 27, vertical: 15),
                   onPressed: (() {

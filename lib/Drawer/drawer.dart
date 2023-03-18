@@ -10,7 +10,7 @@ Widget drawerWidget({
     width: 254,
     height: 812,
     child: Drawer(
-      backgroundColor: WHITE,
+      backgroundColor: Color.fromARGB(80, 0, 0, 0),
       child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
         child: Column(
@@ -125,7 +125,7 @@ Widget _drawerItems(
         width: 217,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: const Color(0xff23395D),
+          color: Colors.transparent,
         ),
         child: Row(
           children: [
@@ -143,7 +143,7 @@ Widget _drawerItems(
             const SizedBox(width: 10),
             Container(
               height: barHeight,
-              color: GREY,
+              color: WHITE,
               width: 3,
             ),
             const SizedBox(width: 10),

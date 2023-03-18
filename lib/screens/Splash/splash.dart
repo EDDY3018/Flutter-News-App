@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_news_app/auth/Login/login.dart';
 import 'package:flutter_news_app/auth/SignUp/SignUp.dart';
 import 'package:flutter_news_app/components/button.dart';
+import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../specs/colors.dart';
@@ -98,26 +99,24 @@ class _SplashState extends State<Splash> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 25.0),
-                          child: button(
-                            divideWidth: 0.4,
-                            height: 65,
-                            showBorder: true,
-                            buttonRadius: 30,
-                            textColor: WHITE,
-                            color: BLACK,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
+                          child: ElevatedButton(
+                              onPressed: () => Navigator.of(context).push(
                                   MaterialPageRoute(
-                                      builder: (context) => LoginPage()));
-                            },
-                            text: 'Login',
-                            textStyle: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                                color: BLACK),
-                            context: context,
-                          ),
+                                      builder: (context) => LoginPage())),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                fixedSize: const Size(180, 65),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              child: Text(
+                                'Login',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              )),
                         ),
                         SizedBox(width: 27),
                         button(
@@ -151,3 +150,29 @@ class _SplashState extends State<Splash> {
     );
   }
 }
+
+/*
+button(
+                            divideWidth: 0.4,
+                            height: 65,
+                            buttonRadius: 30,
+                            textColor: BLACK,
+                            border: Border.all(
+                              color: BLACK,
+                              width: 5,
+                            ),
+                            color: Color.fromARGB(255, 248, 245, 245),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LoginPage()));
+                            },
+                            text: 'Login',
+                            textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
+                                color: BLACK),
+                            context: context,
+                          ),
+*/

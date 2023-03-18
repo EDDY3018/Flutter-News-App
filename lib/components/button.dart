@@ -26,6 +26,7 @@ Widget button({
   ButtonStyle? style,
   Widget? icon,
   EdgeInsets? margin,
+  Border? border,
 }) {
   return SizedBox(
     width: useWidth ? MediaQuery.of(context!).size.width * divideWidth : null,
