@@ -111,7 +111,7 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
                                             IconButton(
                                               icon: Icon(
                                                   Icons.bookmark_border_sharp),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
@@ -119,7 +119,7 @@ class _TopHeadlinesScreenState extends State<TopHeadlinesScreen> {
                                           children: [
                                             IconButton(
                                               icon: Icon(Icons.favorite),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),

@@ -111,7 +111,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
                                             IconButton(
                                               icon: Icon(
                                                   Icons.bookmark_border_sharp),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
@@ -119,7 +119,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
                                           children: [
                                             IconButton(
                                               icon: Icon(Icons.favorite),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),

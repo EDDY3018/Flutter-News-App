@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:card_swiper/card_swiper.dart';
-import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
@@ -112,7 +111,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                             IconButton(
                                               icon: Icon(
                                                   Icons.bookmark_border_sharp),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
@@ -120,7 +119,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                           children: [
                                             IconButton(
                                               icon: Icon(Icons.favorite),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),

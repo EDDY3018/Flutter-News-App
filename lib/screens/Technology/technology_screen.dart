@@ -112,7 +112,7 @@ class _TechnologyScreenState extends State<TechnologyScreen> {
                                             IconButton(
                                               icon: Icon(
                                                   Icons.bookmark_border_sharp),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
@@ -120,7 +120,7 @@ class _TechnologyScreenState extends State<TechnologyScreen> {
                                           children: [
                                             IconButton(
                                               icon: Icon(Icons.favorite),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),

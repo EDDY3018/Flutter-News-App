@@ -111,7 +111,7 @@ class _SportsScreenState extends State<SportsScreen> {
                                             IconButton(
                                               icon: Icon(
                                                   Icons.bookmark_border_sharp),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
@@ -119,7 +119,7 @@ class _SportsScreenState extends State<SportsScreen> {
                                           children: [
                                             IconButton(
                                               icon: Icon(Icons.favorite),
-                                              color: BLACK,
+                                              color: BLACK, onPressed: () {  },
                                             )
                                           ],
                                         ),
