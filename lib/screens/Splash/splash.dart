@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_news_app/auth/Login/login.dart';
 import 'package:flutter_news_app/auth/SignUp/SignUp.dart';
 import 'package:flutter_news_app/components/button.dart';
-import 'package:flutter_news_app/screens/Home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../specs/colors.dart';
